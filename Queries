@@ -215,7 +215,7 @@ Queries:
 5.db.products.find({},
 {product_price:1,product_material:1}
 ).pretty()
-6.db.collection.find({
+6.db.products.find({
   product_material: {
     $in: [
       "Soft"
