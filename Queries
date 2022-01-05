@@ -212,3 +212,13 @@ Queries:
     "$gte": 500
   }
 })
+5.db.products.find({},
+{product_price:1,product_material:1}
+).pretty()
+6.db.collection.find({
+  product_material: {
+    $in: [
+      "Soft"
+    ]
+  }
+})
