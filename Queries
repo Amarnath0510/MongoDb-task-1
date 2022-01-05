@@ -223,3 +223,5 @@ Queries:
   }
 })
 
+7.db.products.deleteMany({
+... product_price:36.00})
