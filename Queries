@@ -222,6 +222,12 @@ Queries:
     ]
   }
 })
-
-7.db.products.deleteMany({
+7.db.collection.aggregate([
+  {
+    $match: {
+      product_price: 492.00
+    }
+  }
+])
+9.db.products.deleteMany({
 ... product_price:36.00})
