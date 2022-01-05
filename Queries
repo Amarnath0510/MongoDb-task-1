@@ -195,3 +195,12 @@ Delete the products which product price value are same
 Queries:
 
 1.db.products.find({}).pretty()
+2.db.collection.find({
+  "product_price": {
+    "$not": {
+      "$gte": 400,
+      "$lte": 800
+    }
+  }
+})
+3.
