@@ -195,10 +195,15 @@ Delete the products which product price value are same
 Queries:
 
 1.db.products.find({}).pretty()
+
+
+
 2.db.products.find({
-... product_price:{
-... "$gte":400,"$lte":800}
-... })
+ product_price:{
+ "$gte":400,"$lte":800}
+ })
+
+
 3.db.products.find({
   "product_price": {
     "$not": {
@@ -207,14 +212,23 @@ Queries:
     }
   }
 })
+
+
+
 4.db.products.find({
   "product_price": {
     "$gte": 500
   }
 })
+
+
+
+
 5.db.products.find({},
 {product_price:1,product_material:1}
 ).pretty()
+
+
 6.db.products.find({
   product_material: {
     $in: [
@@ -222,12 +236,26 @@ Queries:
     ]
   }
 })
-7.db.collection.aggregate([
+
+
+7.db.products.aggregate([
   {
     $match: {
       product_price: 492.00
     }
   }
 ])
+
+
+8.db.products.aggregate([
+  {
+    $match: {
+      product_color: "indigo"
+    }
+  }
+])
+
+
+
 9.db.products.deleteMany({
-... product_price:36.00})
+ product_price:36.00})
